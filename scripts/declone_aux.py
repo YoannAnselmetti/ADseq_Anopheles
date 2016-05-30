@@ -1,4 +1,8 @@
-# Importing the DeClone/BESST output.
+__author__ = "Cedric Chauve"
+__date__ = "May 2016"
+
+# Importing important files from genes data, DeClone and BESST computations.
+# This functions do not perform any processing of the data
 
 import sys
 from operator import itemgetter
@@ -17,45 +21,45 @@ def read_tab_file(f): # return a list of splitted lines for a tab separated fine
 # Anopheles_albimanus  KB672286  GF0003303  AALB004105  -  461220  466589; TO DO: add exon information
 
 # Genes - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
-GENES_ID=[]     # List of all gene names
-GENES_INFO={}   # Info on each gene
-GENES=[GENES_ID,GENES_INFO]
+__GENES_ID=[]     # List of all gene names
+__GENES_INFO={}   # Info on each gene
+__GENES=[__GENES_ID,__GENES_INFO]
 
 def GENES_list():        # List of all gene names
-    return GENES[0]
+    return __GENES[0]
 def GENE_species(gene):  # species containing gene g given by name
-    return GENES[1][gene][0]
+    return __GENES[1][gene][0]
 def GENE_scf(gene):      # scaffold/contig/chromosome containing gene g given by name
-    return GENES[1][gene][1]
+    return __GENES[1][gene][1]
 def GENE_pos(gene):      # realtive position of gene g (by name) in its scaffold/contig/chromosome
-    return GENES[1][gene][6]
+    return __GENES[1][gene][6]
 def GENE_sign(gene):     # orientation of gene g (by name) in its scaffold/contig/chromosome
-    return GENES[1][gene][3]
+    return __GENES[1][gene][3]
 def GENE_start(gene):    # start position of  gene g (by name) in its scaffold/contig/chromosome
-    return GENES[1][gene][4]
+    return __GENES[1][gene][4]
 def GENE_end(gene):      # end position of  gene g (by name) in its scaffold/contig/chromosome
-    return GENES[1][gene][5]
+    return __GENES[1][gene][5]
 def GENE_og(gene):       # orthogroup of gene g (by name)
-    return GENES[1][gene][2]
+    return __GENES[1][gene][2]
 
 # Scaffolds/contigs- - - - - - - - - - - - - - - - - - - - - - - - - - 
-SCF_ID=[]       # ID of scaffolds
-SCF_GENES={}    # Genes on a scaffold
-SCF_SPECIES={}  # Species of a scaffold
-SCF=[SCF_ID,SCF_GENES,SCF_SPECIES]
+__SCF_ID=[]       # ID of scaffolds
+__SCF_GENES={}    # Genes on a scaffold
+__SCF_SPECIES={}  # Species of a scaffold
+__SCF=[__SCF_ID,__SCF_GENES,__SCF_SPECIES]
 
 def SCF_list():         # List of all scaffolds/contigs/chromosomes
-    return SCF[0]
+    return __SCF[0]
 def SCF_genes(scf):     # List of all genes in scaffold/contig/chromosome scf (assumption: no 2 identical names in different species)
-    return SCF[1][scf]
+    return __SCF[1][scf]
 def SCF_nbgenes(scf):   # Number of  genes in scaffold/contig/chromosome scf (assumption: no 2 identical names in different species)
-    return len(SCF[1][scf])
+    return len(__SCF[1][scf])
 def SCF_species(scf):   # Species containing scaffold/contig/chromosome scf (assumption: no 2 identical names in different species)
-    return SCF[2][scf]
+    return __SCF[2][scf]
 
 # Translating orientation string +/-/? into integers +1/-1/0
-ORIENT_2_INT={"+":1,"-":-1,"?":0}
-INT_2_ORIENT={1:"+",-1:"-",0:"?"}
+__ORIENT_2_INT={"+":1,"-":-1,"?":0}
+__INT_2_ORIENT={1:"+",-1:"-",0:"?"}
 
 # Main import function - - - - - - - - - - - - - - - - - - - - - - - - -
 # Read a gene file and populates the structures GENES and SCF
@@ -70,32 +74,32 @@ def GENES_import(genes_file): # genes_file is a list corresponding to the splitt
     prev_scf=""
     for (species,scf,og,gene,sign,start,end) in genes_file_aux:
         if scf!=prev_scf:
-            SCF_ID.append(scf)
-            SCF_GENES[scf]=[]            
+            __SCF_ID.append(scf)
+            __SCF_GENES[scf]=[]            
             position=0
         position+=1
-        GENES[0].append(gene)
-        GENES[1][gene]=(species,scf,og,ORIENT_2_INT[sign],start,end,position)
-        SCF_GENES[scf].append(gene)                          
-        SCF_SPECIES[scf]=species
+        __GENES[0].append(gene)
+        __GENES[1][gene]=(species,scf,og,__ORIENT_2_INT[sign],start,end,position)
+        __SCF_GENES[scf].append(gene)                          
+        __SCF_SPECIES[scf]=species
         prev_scf=scf        
-    GENES[0].append("NA")
-    GENES[1]["NA"]=("ANCESTRAL","NA","NA",0,0,0,0)
-    SCF_ID.append("NA")
-    SCF_GENES["NA"]=[]
-    SCF_SPECIES["NA"]="NA"
+    __GENES[0].append("NA")
+    __GENES[1]["NA"]=("ANCESTRAL","NA","NA",0,0,0,0)
+    __SCF_ID.append("NA")
+    __SCF_GENES["NA"]=[]
+    __SCF_SPECIES["NA"]="NA"
 
 # Orthogroups - - - - - - - - - - - - - - - - - - - - - - - - - - 
-OG_ID=[]      # List of IDs of orthogroups 
-OG_GENES={}   # Orthogroup indexed by genes names
-OG=[OG_ID,OG_GENES]
+__OG_ID=[]      # List of IDs of orthogroups 
+__OG_GENES={}   # Orthogroup indexed by genes names
+__OG=[__OG_ID,__OG_GENES]
 
 def OG_list():      # List of all orthogroups
-    return OG[0]
+    return __OG[0]
 def OG_genes(og):   # List of all genes in orthogroup og
-    return OG[1][og]
+    return __OG[1][og]
 def OG_size(og):    # Number of genes in orthogroup og
-    return len(OG[1][og])
+    return len(__OG[1][og])
 
 # Importing the orthogroups
 def OG_import(genes_file): # gene_file is a list corresponding to the splitted lines of a gene file
@@ -106,22 +110,22 @@ def OG_import(genes_file): # gene_file is a list corresponding to the splitted l
     prev_og=""
     for (species,scf,og,gene,sign,start,end) in genes_file_aux:
         if og!=prev_og:
-            OG_ID.append(og)
-            OG_GENES[og]=[]            
-        OG_GENES[og].append(gene)                          
+            __OG_ID.append(og)
+            __OG_GENES[og]=[]            
+        __OG_GENES[og].append(gene)                          
         prev_og=og
 
 # Genomes - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
-GENOMES_ID=[]    # Names of genomes
-GENOMES_SCF={}   # Scaffolds of a given genome
-GENOMES=[GENOMES_ID,GENOMES_SCF]
+__GENOMES_ID=[]    # Names of genomes
+__GENOMES_SCF={}   # Scaffolds of a given genome
+__GENOMES=[__GENOMES_ID,__GENOMES_SCF]
 
 def GENOMES_list():     # List of all genomes names
-    return GENOMES[0]
+    return __GENOMES[0]
 def GENOMES_scf(g):     # List of all scaffols/contigs/chromosomes in a genome given by name
-    return GENOMES[1][g]
+    return __GENOMES[1][g]
 def GENOMES_nbscf(g):   # Number of scaffolds/contigs/chromosomes in a genome given by name
-    return len(GENOMES[1][g])
+    return len(__GENOMES[1][g])
 def GENOMES_nbgenes(g): # Number of genes in a genome given by name
     res=0
     for scf in GENOMES_scf(g):
@@ -139,10 +143,10 @@ def GENOMES_import(genes_file): # gene_file is a list corresponding to the split
     prev_scf=""
     for (species,scf) in genes_file_aux:
         if species!=prev_species:
-            GENOMES_ID.append(species)
-            GENOMES_SCF[species]=[]            
+            __GENOMES_ID.append(species)
+            __GENOMES_SCF[species]=[]            
         if scf!=prev_scf:
-            GENOMES_SCF[species].append(scf)                          
+            __GENOMES_SCF[species].append(scf)                          
         prev_scf=scf
         prev_species=species
 
@@ -150,12 +154,12 @@ def GENOMES_import(genes_file): # gene_file is a list corresponding to the split
 # BESST file format
 #    Anopheles_albimanus KB672287 KB672445 + + -747.187384203 GF0006744 GF0010639 AALB003904 AALB007558 - + 21633.8126158 0.372384235922 0.362637362637 91
 
-BESST_LINKS={} # BESST links indexed by pairs of contigs and pairs of genes
-BESST_NGBS={}  # Neighbours of a gene or contig
-BESST=[BESST_LINKS,BESST_NGBS]
+__BESST_LINKS={} # BESST links indexed by pairs of contigs and pairs of genes
+__BESST_NGBS={}  # Neighbours of a gene or contig
+__BESST=[__BESST_LINKS,__BESST_NGBS]
 
 def BESST_id(pair): # pair = (i1,i2) = pair of genes or pair of contigs/scaffold/chromosome: returns the corresp. besst entry
-    return BESST[0][pair]
+    return __BESST[0][pair]
 def BESST_species(l):  # species of a besst entry
     return l[0]  
 def BESST_ctg1(l):     # contig 1 of a besst entry
@@ -181,35 +185,35 @@ def BESST_dscore(l):   # besst dscore
 def BESST_nbpe(l):     # number of paired-end reads supporting a besst entry
     return int(l[11])
 def BESST_adj(i1,i2):  # test if i2 is the mate of i1 to define a besst entry: boolean
-    return i2 in BESST[1][i1]
+    return i2 in __BESST[1][i1]
 
 # Importing a besst file
 def BESST_import(besst_file): # besst_file is a list of the splitted lines of a BESST file
     for scf in SCF_list():
-        BESST_NGBS[scf]=[]
+        __BESST_NGBS[scf]=[]
     for g in GENES_list():
-        BESST_NGBS[g]=[]
+        __BESST_NGBS[g]=[]
     for (s,c1,c2,oc1,oc2,d1,gf1,gf2,g1,g2,og1,og2,d2,vs,ds,nbl) in besst_file:
-        BESST_LINKS[(g1,g2)]=(s,c1,c2,ORIENT_2_INT[oc1],ORIENT_2_INT[oc2],d1,g1,g2,d2,vs,ds,nbl)
-        BESST_LINKS[(g2,g1)]=(s,c2,c1,-1*ORIENT_2_INT[oc2],-1*ORIENT_2_INT[oc1],d1,g2,g1,d2,vs,ds,nbl)
-        BESST_LINKS[(c1,c2)]=(s,c1,c2,ORIENT_2_INT[oc1],ORIENT_2_INT[oc2],d1,g1,g2,d2,vs,ds,nbl)
-        BESST_LINKS[(c2,c1)]=(s,c2,c1,-1*ORIENT_2_INT[oc2],-1*ORIENT_2_INT[oc1],d1,g2,g1,d2,vs,ds,nbl)        
-        BESST_NGBS[g1].append(g2)
-        BESST_NGBS[g2].append(g1)
-        BESST_NGBS[c1].append(c2)
-        BESST_NGBS[c2].append(c1)
+        __BESST_LINKS[(g1,g2)]=(s,c1,c2,__ORIENT_2_INT[oc1],__ORIENT_2_INT[oc2],d1,g1,g2,d2,vs,ds,nbl)
+        __BESST_LINKS[(g2,g1)]=(s,c2,c1,-1*__ORIENT_2_INT[oc2],-1*__ORIENT_2_INT[oc1],d1,g2,g1,d2,vs,ds,nbl)
+        __BESST_LINKS[(c1,c2)]=(s,c1,c2,__ORIENT_2_INT[oc1],__ORIENT_2_INT[oc2],d1,g1,g2,d2,vs,ds,nbl)
+        __BESST_LINKS[(c2,c1)]=(s,c2,c1,-1*__ORIENT_2_INT[oc2],-1*__ORIENT_2_INT[oc1],d1,g2,g1,d2,vs,ds,nbl)
+        __BESST_NGBS[g1].append(g2)
+        __BESST_NGBS[g2].append(g1)
+        __BESST_NGBS[c1].append(c2)
+        __BESST_NGBS[c2].append(c1)
 
 # --------------- Reading DeClone results ---------------------------------------------
 
-DECLONE_ID=[]           # List of instances IDs
-DECLONE_INSTANCES={}    # List of all instances
-DECLONE=[DECLONE_ID,DECLONE_INSTANCES]#,DECLONE_GENE_PAIRS,DECLONE_SPECIES,DECLONE_SCF]
+__DECLONE_ID=[]           # List of instances IDs
+__DECLONE_INSTANCES={}    # List of all instances
+__DECLONE=[__DECLONE_ID,__DECLONE_INSTANCES]#,DECLONE_GENE_PAIRS,DECLONE_SPECIES,DECLONE_SCF]
 
 def DECLONE_instances(): # list of instances IDs
-    return DECLONE[0]
+    return __DECLONE[0]
 
 def DECLONE_adj_per_instance(i): # list of adjacencies in an instance
-    return DECLONE[1][i]
+    return __DECLONE[1][i]
 
 def DECLONE_adj_species_id(adj):    # species ID of an adjacency
     return adj[0][0]
@@ -238,7 +242,7 @@ def DECLONE_adj_orctg1(adj):        # orientation of contig 1 in an adjacency
 def DECLONE_adj_orctg2(adj):        # orientation of contig 2 in an adjacency
     return adj[6][1]
 
-def split_adjacency(l1): # Local: Splitting an adjacency into (????)
+def __split_adjacency(l1): # Local: Splitting an adjacency into (????)
     l11=l1[1].split(":")
     l12=l1[2].split(":")
     l13=float(l1[3])
@@ -250,7 +254,7 @@ def split_adjacency(l1): # Local: Splitting an adjacency into (????)
 # Approach 1: looking at the given extremity: only scaffolds of size 1 can not be oriented
 # Approach 2: looking if the observed homologous adjacencies all agree on an orientation
 # c is a correction: 1 for first gene of an adjacency, -1 for second gene
-def orient_scf(gene,instance,c): # Local: Orienting a scaffold containing a gene in an instance
+def __orient_scf(gene,instance,c): # Local: Orienting a scaffold containing a gene in an instance
     (nbg,pos,sign)=(SCF_nbgenes(GENE_scf(gene)),GENE_pos(gene),GENE_sign(gene))
     result=0
     if sign!=0 and nbg>1 and pos==nbg:
@@ -284,54 +288,29 @@ def orient_scf(gene,instance,c): # Local: Orienting a scaffold containing a gene
 # Importing DeClone adjacencies
 def DECLONE_import(declone_file):
     # Step 1: no orientation
-    DECLONE_INSTANCES_AUX={}
+    __DECLONE_INSTANCES_AUX={}
     declone_file.sort(key=itemgetter(5))
     prev_instance=("","","")    
     for l in declone_file:
-        (l10,l11,l12,l13,l14,l15)=split_adjacency(l)
+        (l10,l11,l12,l13,l14,l15)=__split_adjacency(l)
         gene1=l14[1]
         gene2=l14[2]
         adj=((l10,l14[0]),(l11[0],l11[1],l14[1]),(l12[0],l12[1],l14[2]),l13,(l15[0],l15[1],l15[2]),("NA","NA","NA","NA","NA")) 
         tl15=tuple(l15)
         if tl15!=prev_instance:
-            DECLONE_ID.append(tl15)
-            DECLONE_INSTANCES_AUX[tl15]=[]
-        DECLONE_INSTANCES_AUX[tl15].append(adj)
+            __DECLONE_ID.append(tl15)
+            __DECLONE_INSTANCES_AUX[tl15]=[]
+        __DECLONE_INSTANCES_AUX[tl15].append(adj)
         prev_instance=tl15
     # Step 2: Orienting DeClone adjacencies
     for instance in DECLONE_instances():
-        DECLONE_INSTANCES[instance]=[]
-        for adj in DECLONE_INSTANCES_AUX[instance]:
+        __DECLONE_INSTANCES[instance]=[]
+        for adj in __DECLONE_INSTANCES_AUX[instance]:
             gene1=DECLONE_adj_gene1_name(adj)
             gene2=DECLONE_adj_gene2_name(adj)
             if DECLONE_adj_score(adj)<1:
-                or1=orient_scf(gene1,instance,1)
-                or2=orient_scf(gene2,instance,-1)
+                or1=__orient_scf(gene1,instance,1)
+                or2=__orient_scf(gene2,instance,-1)
             else:
                 (or1,or2)=(0,0)
-            DECLONE_INSTANCES[instance].append((adj[0],adj[1],adj[2],adj[3],adj[4],adj[5],(or1,or2)))
-
-# --------------- Importing files example ---------------------------------
-
-# def import_files():
-#     genes_file1=open(sys.argv[1],"r").readlines()
-#     for l in genes_file1:
-#         if l[0]!="#":
-#             l1=l.rstrip().split("\t")
-#             genes_file.append((l1[0],l1[1],l1[2],l1[3],l1[4],int(l1[5]),int(l1[6])))
-
-#     besst_file1=open(sys.argv[2],"r").readlines()
-#     for l in besst_file1:
-#         if l[0]!="#":
-#             besst_file.append(l.rstrip().split("\t"))
-
-#     declone_file1=open(sys.argv[3],"r").readlines()
-#     for l in declone_file1:
-#         if l[0]!="#":
-#             declone_file.append(l.rstrip().split("\t"))
-
-#     GENES_import()
-#     OG_import()
-#     GENOMES_import()
-#     BESST_import()
-#     DECLONE_import()
+            __DECLONE_INSTANCES[instance].append((adj[0],adj[1],adj[2],adj[3],adj[4],adj[5],(or1,or2)))
