@@ -206,15 +206,16 @@ def BESST_import(besst_file): # besst_file is a list of the splitted lines of a 
 # --------------- Reading DeClone results ---------------------------------------------
 
 __DECLONE_ID=[]           # List of instances IDs
-__DECLONE_INSTANCES={}    # List of all instances
-__DECLONE=[__DECLONE_ID,__DECLONE_INSTANCES]#,DECLONE_GENE_PAIRS,DECLONE_SPECIES,DECLONE_SCF]
+__DECLONE_INSTANCES={}    # List of adjacencies organized by instances
+__DECLONE_ADJACENCIES=[]  # List of all adjacencies
+__DECLONE=[__DECLONE_ID,__DECLONE_INSTANCES,__DECLONE_ADJACENCIES]
 
-def DECLONE_instances(): # list of instances IDs
+def DECLONE_instances_list():    # list of instances IDs
     return __DECLONE[0]
-
 def DECLONE_adj_per_instance(i): # list of adjacencies in an instance
     return __DECLONE[1][i]
-
+def DECLONE_adjacencies_list():  # list of all adjacencieds
+    return __DECLONE[2]
 def DECLONE_adj_species_id(adj):    # species ID of an adjacency
     return adj[0][0]
 def DECLONE_adj_species_name(adj):  # species name of an adjacency
@@ -303,7 +304,7 @@ def DECLONE_import(declone_file):
         __DECLONE_INSTANCES_AUX[tl15].append(adj)
         prev_instance=tl15
     # Step 2: Orienting DeClone adjacencies
-    for instance in DECLONE_instances():
+    for instance in DECLONE_instances_list():
         __DECLONE_INSTANCES[instance]=[]
         for adj in __DECLONE_INSTANCES_AUX[instance]:
             gene1=DECLONE_adj_gene1_name(adj)
@@ -314,3 +315,4 @@ def DECLONE_import(declone_file):
             else:
                 (or1,or2)=(0,0)
             __DECLONE_INSTANCES[instance].append((adj[0],adj[1],adj[2],adj[3],adj[4],adj[5],(or1,or2)))
+            __DECLONE_ADJACENCIES.append((adj[0],adj[1],adj[2],adj[3],adj[4],adj[5],(or1,or2)))
