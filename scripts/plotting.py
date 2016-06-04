@@ -7,7 +7,7 @@ import sys, math, numpy as np
 import matplotlib, matplotlib.pyplot as plt
 
 # Plotting a distribution of values per species in stacked bars (c = floating color modifier)
-def plot_scores_distribution_per_species(T,nb_stacks,c,xlabel,title,h):
+def plot_scores_distribution_per_species(T,nb_stacks,c,xlabel,title,h,show):
     ivalues=range(0,nb_stacks)
     bars={}
     bars[0]=[]
@@ -29,4 +29,5 @@ def plot_scores_distribution_per_species(T,nb_stacks,c,xlabel,title,h):
     plt.title(title)
     plt.yticks(ind+height/2,  T.keys())
     plt.xlabel(xlabel)    
-    plt.show()
+    if show:
+        plt.show()
