@@ -212,6 +212,14 @@ __DECLONE=[__DECLONE_ID,__DECLONE_INSTANCES,__DECLONE_ADJACENCIES]
 
 def DECLONE_instances_list():    # list of instances IDs
     return __DECLONE[0]
+def DECLONE_instance_tree1(i):
+    return i[0]
+def DECLONE_instance_tree2(i):
+    return i[1]
+def DECLONE_instance_gene1(i):
+    return i[2].split("-")[0]
+def DECLONE_instance_gene2(i):
+    return i[2].split("-")[1]
 def DECLONE_adj_per_instance(i): # list of adjacencies in an instance
     return __DECLONE[1][i]
 def DECLONE_adjacencies_list():  # list of all adjacencieds
