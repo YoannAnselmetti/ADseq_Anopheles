@@ -128,7 +128,7 @@
 7452	autosome
 625	chrom.X
 7450	autosome
-2036	x+losses
+2036	X+losses
 624	autosome
 4590	autosome
 7458	autosome
@@ -233,7 +233,7 @@
 174	aut+losses
 173	autosome
 172	autosome
-171	x+losses
+171	X+losses
 170	autosome
 10513	autosome
 10469	aut+losses
@@ -1796,7 +1796,7 @@
 10719	autosome
 8699	autosome
 8698	autosome
-2299	x+losses
+2299	X+losses
 2298	autosome
 8129	autosome
 2293	autosome
@@ -1943,7 +1943,7 @@
 1322	autosome
 1323	autosome
 1320	autosome
-1321	x+losses
+1321	X+losses
 1326	autosome
 1327	autosome
 1914	aut+losses
@@ -2120,7 +2120,7 @@
 1667	autosome
 1666	aut+losses
 1665	autosome
-1664	x+losses
+1664	X+losses
 1663	autosome
 1662	autosome
 1661	autosome
@@ -2128,7 +2128,7 @@
 591	autosome
 590	autosome
 593	autosome
-592	x+losses
+592	X+losses
 595	aut+losses
 594	aut+losses
 597	autosome
@@ -3044,7 +3044,7 @@
 372	autosome
 375	autosome
 374	aut+losses
-377	x+losses
+377	X+losses
 376	autosome
 11103	aut+losses
 6143	autosome
@@ -3365,7 +3365,7 @@
 9892	autosome
 9893	aut+losses
 11108	autosome
-5519	x+losses
+5519	X+losses
 5518	autosome
 11109	autosome
 5511	autosome
@@ -3650,7 +3650,7 @@
 1050	autosome
 1051	autosome
 1052	autosome
-1430	x+losses
+1430	X+losses
 7829	autosome
 5354	chrom.X
 7823	autosome
@@ -4194,7 +4194,7 @@
 6888	autosome
 6889	autosome
 9884	autosome
-605	x+losses
+605	X+losses
 604	autosome
 607	autosome
 606	autosome
@@ -4801,7 +4801,7 @@
 2964	autosome
 2967	autosome
 2966	autosome
-2961	x+losses
+2961	X+losses
 2960	autosome
 2963	autosome
 2962	autosome
@@ -5598,7 +5598,7 @@
 5334	autosome
 5337	autosome
 5336	aut+losses
-1208	x+losses
+1208	X+losses
 5338	autosome
 3179	autosome
 3178	autosome
@@ -6044,7 +6044,7 @@
 1147	autosome
 1144	autosome
 1145	autosome
-1148	x+losses
+1148	X+losses
 1149	chrom.X
 768	autosome
 769	autosome
@@ -6400,7 +6400,7 @@
 2508	autosome
 2507	aut+losses
 2506	autosome
-2505	x+losses
+2505	X+losses
 2504	autosome
 2503	autosome
 2502	autosome
@@ -6649,7 +6649,7 @@
 8166	aut+losses
 5252	autosome
 5253	autosome
-5250	x+losses
+5250	X+losses
 5251	autosome
 5256	aut+losses
 5257	aut+losses
@@ -8199,7 +8199,7 @@
 1880	autosome
 8592	autosome
 8593	aut+losses
-8590	x+losses
+8590	X+losses
 8591	autosome
 5890	autosome
 5891	autosome
@@ -9491,7 +9491,7 @@
 7557	aut+losses
 7556	chrom.X
 7555	aut+losses
-7554	x+losses
+7554	X+losses
 11176	aut+losses
 4174	autosome
 4175	autosome
@@ -9656,7 +9656,7 @@
 5719	autosome
 5718	autosome
 5717	autosome
-5716	x+losses
+5716	X+losses
 5715	autosome
 5714	chrom.X
 5713	chrom.X
@@ -9792,7 +9792,7 @@
 66	aut+losses
 67	autosome
 68	chrom.X
-69	x+losses
+69	X+losses
 10549	autosome
 508	autosome
 509	autosome
@@ -10456,7 +10456,7 @@
 3120	autosome
 3121	chrom.X
 3126	aut+losses
-3127	x+losses
+3127	X+losses
 3124	chrom.X
 3125	autosome
 8659	aut+losses
@@ -10513,7 +10513,7 @@
 6674	chrom.X
 6677	autosome
 2320	autosome
-6671	x+losses
+6671	X+losses
 6670	autosome
 6673	autosome
 6672	chrom.X
@@ -11381,7 +11381,7 @@
 112	chrom.X
 3244	autosome
 119	autosome
-118	x+losses
+118	X+losses
 11505	aut+losses
 8932	chrom.X
 7272	autosome
@@ -11496,7 +11496,7 @@
 1299	autosome
 5492	autosome
 10311	aut+losses
-1560	x+losses
+1560	X+losses
 1561	autosome
 1562	autosome
 1563	autosome
