@@ -1,0 +1,300 @@
+#####  Statistics on SPECIES  #####
+
+Number of species :			35	(EXT 18 | ANC 17)
+Number of species + Gene data :		35	(EXT 18 | ANC 17)
+Number of species - Gene data :		0	(Ratio 0%)
+Number of EXT species - Gene data :	0	(Ratio 0%)
+Number of ANC species - Gene data :	0	(Ratio 0%)
+
+Species without Gene data :
+-----------------------------------
+
+
+
+#####  Statistics on GENES  #####
+
+Number of genes : 358982 (EXT 172585 | ANC 186397)
+
+Average number of genes per specie : 10256.6 (EXT 9588.06 | ANC 10964.5)
+Minimum number : 8250 (EXT 8250 | ANC 9830)
+Maximum number : 11747 (EXT 11345 | ANC 11747)
+
+Number of genes belonging to adjacencies :	348927 (10055 genes which have no adjacency | Ratio 2.80098%)
+Number of EXT genes belonging to adjacencies :	168294 (4291 genes which have no adjacency | Ratio 2.48631%)
+Number of ANC genes belonging to adjacencies :	180633 (5764 genes which have no adjacency | Ratio 3.09232%)
+
+
+
+#####  Statistics on Adjacencies  #####
+
+Number of adjacencies : 356022 (EXT 161475 | ANC 194547)
+
+Number of genes and adjacencies by specie
+-----------------------------------
+EXT Specie #0 : 9863 genes - 9857 adjacencies	(Anopheles_gambiae)
+EXT Specie #1 : 9742 genes - 9551 adjacencies	(Anopheles_arabiensis)
+EXT Specie #3 : 9725 genes - 9454 adjacencies	(Anopheles_quadriannulatus)
+EXT Specie #5 : 11345 genes - 9275 adjacencies	(Anopheles_melas)
+EXT Specie #6 : 9745 genes - 9188 adjacencies	(Anopheles_merus)
+EXT Specie #9 : 8456 genes - 7218 adjacencies	(Anopheles_christyi)
+EXT Specie #11 : 9495 genes - 9180 adjacencies	(Anopheles_epiroticus)
+EXT Specie #13 : 9640 genes - 9277 adjacencies	(Anopheles_stephensi)
+EXT Specie #14 : 9553 genes - 7345 adjacencies	(Anopheles_maculatus)
+EXT Specie #16 : 10364 genes - 9588 adjacencies	(Anopheles_culicifacies)
+EXT Specie #17 : 9420 genes - 9332 adjacencies	(Anopheles_minimus)
+EXT Specie #19 : 9655 genes - 9439 adjacencies	(Anopheles_funestus)
+EXT Specie #23 : 9513 genes - 9361 adjacencies	(Anopheles_dirus)
+EXT Specie #24 : 9545 genes - 9390 adjacencies	(Anopheles_farauti)
+EXT Specie #27 : 9547 genes - 9263 adjacencies	(Anopheles_atroparvus)
+EXT Specie #28 : 10015 genes - 9007 adjacencies	(Anopheles_sinensis)
+EXT Specie #31 : 8712 genes - 8663 adjacencies	(Anopheles_albimanus)
+EXT Specie #32 : 8250 genes - 7087 adjacencies	(Anopheles_darlingi)
+ANC Specie #2 : 10937 genes - 11633 adjacencies
+ANC Specie #4 : 11153 genes - 12020 adjacencies
+ANC Specie #7 : 10678 genes - 10478 adjacencies
+ANC Specie #8 : 11677 genes - 12799 adjacencies
+ANC Specie #10 : 11583 genes - 12628 adjacencies
+ANC Specie #12 : 11610 genes - 12815 adjacencies
+ANC Specie #15 : 10774 genes - 10796 adjacencies
+ANC Specie #18 : 10813 genes - 11358 adjacencies
+ANC Specie #20 : 11048 genes - 11884 adjacencies
+ANC Specie #21 : 11443 genes - 12480 adjacencies
+ANC Specie #22 : 11747 genes - 13136 adjacencies
+ANC Specie #25 : 10591 genes - 11408 adjacencies
+ANC Specie #26 : 11379 genes - 12569 adjacencies
+ANC Specie #29 : 10319 genes - 10068 adjacencies
+ANC Specie #30 : 10945 genes - 11181 adjacencies
+ANC Specie #33 : 9870 genes - 8874 adjacencies
+ANC Specie #34 : 9830 genes - 8420 adjacencies
+
+Number of adjacencies by specie
+-----------------------------------
+Average number of adjacencies per specie : 10172.1 (EXT 8970.83 | ANC 11443.9)
+Minimum number : 7087 (EXT 7087 | ANC 8420)
+Maximum number : 13136 (EXT 9857 | ANC 13136)
+
+Number of adjacencies by gene
+-----------------------------------
+Average number of adjacencies per gene : 1.98351 (EXT 1.87125 | ANC 2.08745)
+Minimum number : 0 (EXT 0 | ANC 0)
+Maximum number : 6 (EXT 5 | ANC 6)
+
+Number of genes which have no adjacency :	10055	(Ratio 2.80098%)
+Number of EXT genes which have no adjacency :	4291	(Ratio 2.48631%)
+Number of ANC genes which have no adjacency :	5764	(Ratio 3.09232%)
+
+Number of genes with stricly 1 adjacency :	30669	(Ratio 8.54333%)
+Number of EXT genes with stricly 1 adjacency :	16112	(Ratio 9.33569%)
+Number of ANC genes with stricly 1 adjacency :	14557	(Ratio 7.80968%)
+
+Number of genes with stricly 2 adjacencies :		278637	(Ratio 77.6187%)
+Number of EXT genes with stricly 2 adjacencies :	149848	(Ratio 86.8256%)
+Number of ANC genes with stricly 2 adjacencies :	128789	(Ratio 69.0939%)
+
+Number of genes with stricly more than 2 adjacencies :		39621	(Ratio 11.037%)
+Number of EXT genes with stricly more than 2 adjacencies :	2334	(Ratio 1.35238%)
+Number of ANC genes with stricly more than 2 adjacencies :	37287	(Ratio 20.0041%)
+
+Distribution Number of genes sharing the same number of adjacencies
+-----------------------------------
+EXT 0 Adj - 4291 genes
+EXT 1 Adj - 16112 genes
+EXT 2 Adj - 149848 genes
+EXT 3 Adj - 2196 genes
+EXT 4 Adj - 136 genes
+EXT 5 Adj - 2 genes
+
+ANC 0 Adj - 5764 genes
+ANC 1 Adj - 14557 genes
+ANC 2 Adj - 128789 genes
+ANC 3 Adj - 32621 genes
+ANC 4 Adj - 4258 genes
+ANC 5 Adj - 384 genes
+ANC 6 Adj - 24 genes
+
+Distribution Number of genes sharing the same number of adjacencies by specie
+-----------------------------------
+EXT Specie #0:	0	12	9851	(Anopheles_gambiae)
+EXT Specie #1:	98	190	9450	4	(Anopheles_arabiensis)
+EXT Specie #3:	132	287	9297	9	(Anopheles_quadriannulatus)
+EXT Specie #5:	769	3131	6937	487	21	(Anopheles_melas)
+EXT Specie #6:	121	877	8742	5	(Anopheles_merus)
+EXT Specie #9:	407	1961	5799	279	10	(Anopheles_christyi)
+EXT Specie #11:	124	420	8916	33	1	1	(Anopheles_epiroticus)
+EXT Specie #13:	63	601	8975	1	(Anopheles_stephensi)
+EXT Specie #14:	1258	2758	4758	701	77	1	(Anopheles_maculatus)
+EXT Specie #16:	282	1528	8038	492	24	(Anopheles_culicifacies)
+EXT Specie #17:	47	82	9291	(Anopheles_minimus)
+EXT Specie #19:	52	339	9253	11	(Anopheles_funestus)
+EXT Specie #23:	87	138	9281	6	1	(Anopheles_dirus)
+EXT Specie #24:	23	266	9254	2	(Anopheles_farauti)
+EXT Specie #27:	175	219	9152	1	(Anopheles_atroparvus)
+EXT Specie #28:	328	1505	8039	141	2	(Anopheles_sinensis)
+EXT Specie #31:	9	80	8623	(Anopheles_albimanus)
+EXT Specie #32:	316	1718	6192	24	(Anopheles_darlingi)
+ANC Specie #2:	235	394	8252	1866	180	10
+ANC Specie #4:	269	447	8010	2152	258	17
+ANC Specie #7:	286	1154	7998	1158	78	4
+ANC Specie #8:	360	629	7591	2644	411	41	1
+ANC Specie #10:	387	675	7513	2530	428	47	3
+ANC Specie #12:	386	590	7470	2620	486	52	6
+ANC Specie #15:	325	1016	7886	1394	143	10
+ANC Specie #18:	225	550	8114	1770	142	12
+ANC Specie #20:	265	483	7904	2125	253	18
+ANC Specie #21:	366	537	7676	2430	392	39	3
+ANC Specie #22:	410	554	7352	2803	545	73	10
+ANC Specie #25:	151	517	7676	2047	194	6
+ANC Specie #26:	332	602	7320	2648	434	42	1
+ANC Specie #29:	265	1116	7843	1047	47	1
+ANC Specie #30:	422	1095	7242	1972	203	11
+ANC Specie #33:	450	1881	6783	723	33
+ANC Specie #34:	630	2317	6159	692	31	1
+
+
+
+#####  Statistics on Adjacencies Classes  #####
+
+Number of adjacencies classes : 17236
+Average adjacencies class size : 8.02112
+Minimum number : 2
+Maximum number : 28
+
+Distribution adjacencies classes size
+-----------------------------------
+2 Adj - 3060 Class(es)
+3 Adj - 1574 Class(es)
+4 Adj - 1452 Class(es)
+5 Adj - 1086 Class(es)
+6 Adj - 953 Class(es)
+7 Adj - 828 Class(es)
+8 Adj - 822 Class(es)
+9 Adj - 803 Class(es)
+10 Adj - 797 Class(es)
+11 Adj - 846 Class(es)
+12 Adj - 808 Class(es)
+13 Adj - 796 Class(es)
+14 Adj - 782 Class(es)
+15 Adj - 838 Class(es)
+16 Adj - 786 Class(es)
+17 Adj - 719 Class(es)
+18 Adj - 242 Class(es)
+19 Adj - 31 Class(es)
+20 Adj - 9 Class(es)
+21 Adj - 1 Class(es)
+22 Adj - 2 Class(es)
+28 Adj - 1 Class(es)
+
+
+
+#####  Statistics on Adjacencies Trees  #####
+
+Number of adjacencies trees : 19308
+
+Adjacencies classes size (Size=number of adjacencies)
+-----------------------------------
+Average adjacencies classes size : 1.12021
+Minimum number : 0
+Maximum number : 6
+
+Distribution of adjacencies classes size
+-----------------------------------
+0 Adj tree(s) - 325 Adj classe(s)
+1 Adj tree(s) - 14846 Adj classe(s)
+2 Adj tree(s) - 1779 Adj classe(s)
+3 Adj tree(s) - 248 Adj classe(s)
+4 Adj tree(s) - 31 Adj classe(s)
+5 Adj tree(s) - 6 Adj classe(s)
+6 Adj tree(s) - 1 Adj classe(s)
+
+Adjacencies trees size (Size=number of adjacencies)
+-----------------------------------
+Average adjacencies trees size : 21.6971
+Minimum number : 1
+Maximum number : 45
+
+Distribution of adjacencies trees size
+-----------------------------------
+1 Adj - 2779 Adj tree(s)
+3 Adj - 1155 Adj tree(s)
+4 Adj - 89 Adj tree(s)
+5 Adj - 407 Adj tree(s)
+6 Adj - 46 Adj tree(s)
+7 Adj - 89 Adj tree(s)
+8 Adj - 14 Adj tree(s)
+9 Adj - 870 Adj tree(s)
+10 Adj - 250 Adj tree(s)
+11 Adj - 217 Adj tree(s)
+12 Adj - 39 Adj tree(s)
+13 Adj - 261 Adj tree(s)
+14 Adj - 68 Adj tree(s)
+15 Adj - 194 Adj tree(s)
+16 Adj - 59 Adj tree(s)
+17 Adj - 256 Adj tree(s)
+18 Adj - 78 Adj tree(s)
+19 Adj - 450 Adj tree(s)
+20 Adj - 176 Adj tree(s)
+21 Adj - 505 Adj tree(s)
+22 Adj - 143 Adj tree(s)
+23 Adj - 597 Adj tree(s)
+24 Adj - 263 Adj tree(s)
+25 Adj - 575 Adj tree(s)
+26 Adj - 192 Adj tree(s)
+27 Adj - 733 Adj tree(s)
+28 Adj - 364 Adj tree(s)
+29 Adj - 616 Adj tree(s)
+30 Adj - 220 Adj tree(s)
+31 Adj - 999 Adj tree(s)
+32 Adj - 518 Adj tree(s)
+33 Adj - 944 Adj tree(s)
+34 Adj - 456 Adj tree(s)
+35 Adj - 2326 Adj tree(s)
+36 Adj - 1284 Adj tree(s)
+37 Adj - 631 Adj tree(s)
+38 Adj - 255 Adj tree(s)
+39 Adj - 92 Adj tree(s)
+40 Adj - 52 Adj tree(s)
+41 Adj - 23 Adj tree(s)
+42 Adj - 14 Adj tree(s)
+43 Adj - 4 Adj tree(s)
+44 Adj - 4 Adj tree(s)
+45 Adj - 1 Adj tree(s)
+
+Number of extant adjacencies per adjacencies tree
+-----------------------------------
+Average number of adjacencies trees leaves : 11.09
+Minimum number : 1
+Maximum number : 22
+
+Distribution of number of extant adjacencies per adjacencies trees
+-----------------------------------
+1 EXT Adj - 2779 Adj tree(s)
+2 EXT Adj - 1264 Adj tree(s)
+3 EXT Adj - 446 Adj tree(s)
+4 EXT Adj - 92 Adj tree(s)
+5 EXT Adj - 1179 Adj tree(s)
+6 EXT Adj - 206 Adj tree(s)
+7 EXT Adj - 342 Adj tree(s)
+8 EXT Adj - 246 Adj tree(s)
+9 EXT Adj - 345 Adj tree(s)
+10 EXT Adj - 654 Adj tree(s)
+11 EXT Adj - 659 Adj tree(s)
+12 EXT Adj - 929 Adj tree(s)
+13 EXT Adj - 746 Adj tree(s)
+14 EXT Adj - 1196 Adj tree(s)
+15 EXT Adj - 773 Adj tree(s)
+16 EXT Adj - 1680 Adj tree(s)
+17 EXT Adj - 1391 Adj tree(s)
+18 EXT Adj - 4244 Adj tree(s)
+19 EXT Adj - 127 Adj tree(s)
+20 EXT Adj - 4 Adj tree(s)
+21 EXT Adj - 4 Adj tree(s)
+22 EXT Adj - 2 Adj tree(s)
+
+
+
+#####  Statistics on Events node  #####
+
+Creation number : 4070 ; (nb_arbres_adj_tot - nb_classes= 2072)
+Break number : 11167
+Gene Duplication number : 15736 (compté par DeCo) ; 6163 (ds les arbres réconciliés) 6163 (pour les compter par espèces)
+Adjacencie Duplication number : 270
